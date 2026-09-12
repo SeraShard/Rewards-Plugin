@@ -1,0 +1,5 @@
+name: RewardsPlugin
+version: 1.0.0
+main: net.serashard.rewardsplugin.RewardsPlugin
+author: SeraShard
+api-version: '1.21.11'
