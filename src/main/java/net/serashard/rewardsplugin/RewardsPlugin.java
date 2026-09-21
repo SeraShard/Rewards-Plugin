@@ -10,7 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class RewardsPlugin extends JavaPlugin implements Listener {
-
+  
   @Override
   public void onEnable() {
     saveDefaultConfig();
@@ -21,7 +21,7 @@ public class RewardsPlugin extends JavaPlugin implements Listener {
   public void onPlayerJoin(PlayerJoinEvent event) {
     Player player = event.getPlayer();
     String name = player.getName();
-    boolean val = getConfig().getBoolean(name + ".awarded");
+    boolean val = getConfig().getBoolean(name + ".awarded",true);
     if (!val) {
       int num = getConfig().getInt(name + ".awards");
       for (int i = 0; i < num; i++) {
