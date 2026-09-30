@@ -8,29 +8,28 @@ import org.jspecify.annotations.NonNull;
 
 import java.util.Collection;
 
-public class HasBeenRewardedCommand implements BasicCommand {
+public class ResetRewardsCommand implements BasicCommand {
 
     RewardsPlugin plugin;
 
-    public HasBeenRewardedCommand(RewardsPlugin plugin) {
+    public ResetRewardsCommand(RewardsPlugin plugin) {
         this.plugin = plugin;
     }
 
     @Override
     public void execute(final @NonNull CommandSourceStack source, final String[] args) {
-        if(args.length!=2) {
+        if(args.length!=1) {
             source.getSender().sendRichMessage("<red>Unknown or incomplete command.");
             return;
         }
         String name = args[0];
-        boolean value = Boolean.parseBoolean(args[1]);
-        plugin.getConfig().set(name + ".awarded",value);
+        plugin.getConfig().set(name + ".awarded",false);
         plugin.saveConfig();
     }
 
     @Override
     public String permission() {
-        return "rewardsplugin.hasbeenrewarded";
+        return "rewardsplugin.resetrewards";
     }
 
     @Override
