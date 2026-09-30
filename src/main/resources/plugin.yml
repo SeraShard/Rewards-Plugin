@@ -5,12 +5,12 @@ author: SeraShard
 api-version: '1.21.11'
 
 commands:
-  hasbeenrewarded:
+  resetrewards:
     description: Changes whether a player has received join rewards yet
     usage: /<command>
     permission-message: "You do not have permission to use this command"
-    permission: rewardsplugin.hasbeenrewarded
+    permission: rewardsplugin.resetrewards
 
 permissions:
-  rewardsplugin.hasbeenrewarded:
+  rewardsplugin.resetrewards:
     default: op
