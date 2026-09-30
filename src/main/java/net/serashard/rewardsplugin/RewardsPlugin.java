@@ -16,7 +16,7 @@ public class RewardsPlugin extends JavaPlugin implements Listener {
   @Override
   public void onEnable() {
     saveDefaultConfig();
-    this.registerCommand("hasbeenrewarded", new ResetRewards(this));
+    this.registerCommand("hasbeenrewarded", new ResetRewardsCommand(this));
     Bukkit.getPluginManager().registerEvents(this, this);
   }
 
