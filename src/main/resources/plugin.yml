@@ -3,3 +3,14 @@ version: 1.0.0
 main: net.serashard.rewardsplugin.RewardsPlugin
 author: SeraShard
 api-version: '1.21.11'
+
+commands:
+  hasbeenrewarded:
+    description: Changes whether a player has received join rewards yet
+    usage: /<command>
+    permission-message: "You do not have permission to use this command"
+    permission: rewardsplugin.hasbeenrewarded
+
+permissions:
+  rewardsplugin.hasbeenrewarded:
+    default: op
