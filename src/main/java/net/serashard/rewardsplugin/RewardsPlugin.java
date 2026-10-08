@@ -32,7 +32,6 @@ public class RewardsPlugin extends JavaPlugin implements Listener {
       }
       getConfig().set(name + ".awarded", true);
       saveConfig();
-
     }
   }
 }
